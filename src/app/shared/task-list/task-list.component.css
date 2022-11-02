@@ -1,0 +1,13 @@
+
+.task-item {
+  padding: 8px 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.task-item>div {
+  padding-left: 8px;
+  padding-top: 2px;
+  vertical-align: bottom;
+}

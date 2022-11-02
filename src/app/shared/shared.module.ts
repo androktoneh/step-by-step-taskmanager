@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TaskListComponent } from './task-list/task-list.component';
-import { AppModule } from '../app.module';
+import { FormsModule } from '@angular/forms';
 
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
+import { TaskListComponent } from './task-list/task-list.component';
 
 @NgModule({
   declarations: [
@@ -12,11 +15,15 @@ import { MatExpansionModule } from '@angular/material/expansion';
   ],
   imports: [
     CommonModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   exports: [
     TaskListComponent,
-    MatExpansionModule
+    MatExpansionModule,
+    MatListModule,
+    MatIconModule
   ],
 })
 export class SharedModule { }

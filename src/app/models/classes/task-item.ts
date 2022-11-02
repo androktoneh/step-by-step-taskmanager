@@ -3,8 +3,8 @@ export class TaskItem {
   nomeTask: string;
   concluida: boolean;
 
-  constructor() {
-    this.nomeTask = '';
-    this.concluida = false;
+  constructor(nomeTask = '', concluida = false) {
+    this.nomeTask = nomeTask;
+    this.concluida = concluida;
   }
 }

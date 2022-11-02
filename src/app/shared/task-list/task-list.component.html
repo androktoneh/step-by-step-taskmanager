@@ -1,3 +1,13 @@
 <div class="card-task-list">
-    Oiiiiii
+  <mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+      {{listaDeTarefas?.nomeLista}}
+    </mat-expansion-panel-header>
+    <div class="task-item" *ngFor="let tarefa of listaDeTarefas?.tarefas">
+      <mat-checkbox [(ngModel)]="tarefa.concluida"></mat-checkbox>
+      <div>
+          {{tarefa.nomeTask}}
+      </div>
+    </div>
+  </mat-expansion-panel>
 </div>
