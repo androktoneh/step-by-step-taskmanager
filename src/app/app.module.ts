@@ -5,23 +5,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { GerenciarListasComponent } from './areas/gerenciar-listas/gerenciar-listas.component';
-
-import { SharedModule } from './shared/shared.module';
+import { AreasModule } from './areas/areas.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    GerenciarListasComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
     BrowserAnimationsModule,
+    AreasModule
   ],
-  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
