@@ -31,38 +31,38 @@ export class GerenciarListasComponent implements OnInit {
     novaLista.push(new TaskList(
       "Lista de Exemplos",
       [
-        {concluida: false, nomeTask: "Tarefa um pipipipopopo"},
-        {concluida: false, nomeTask: "Tarefa dois pipipipopopo"},
-        {concluida: false, nomeTask: "Tarefa três pipipipopopo"},
-        {concluida: false, nomeTask: "Tarefa quatro pipipipopopo"},
+        {status: 1, concluida: false, nomeTask: "Tarefa um pipipipopopo"},
+        {status: 1, concluida: false, nomeTask: "Tarefa dois pipipipopopo"},
+        {status: 1, concluida: false, nomeTask: "Tarefa três pipipipopopo"},
+        {status: 1, concluida: false, nomeTask: "Tarefa quatro pipipipopopo"},
       ])
     )
 
     novaLista.push(new TaskList(
       "Segunda Lista",
       [
-        {concluida: true, nomeTask: "Listando coisas"},
-        {concluida: true, nomeTask: "Algumas ja foram feitas"},
-        {concluida: false, nomeTask: "outras não"},
-        {concluida: false, nomeTask: "mas pelo menos da pra ver"},
-        {concluida: false, nomeTask: "quanto trabalho ainda tem pela frente"},
-        {concluida: false, nomeTask: "e caramba"},
-        {concluida: false, nomeTask: "haja trabalho!"},
+        {status: 1, concluida: true, nomeTask: "Listando coisas"},
+        {status: 1, concluida: true, nomeTask: "Algumas ja foram feitas"},
+        {status: 1, concluida: false, nomeTask: "outras não"},
+        {status: 1, concluida: false, nomeTask: "mas pelo menos da pra ver"},
+        {status: 1, concluida: false, nomeTask: "quanto trabalho ainda tem pela frente"},
+        {status: 1, concluida: false, nomeTask: "e caramba"},
+        {status: 1, concluida: false, nomeTask: "haja trabalho!"},
       ])
     )
 
     novaLista.push(new TaskList(
       "Terceira lista",
       [
-        {concluida: true, nomeTask: "Essa aqui só tem uma coisa"},
+        {status: 1, concluida: true, nomeTask: "Essa aqui só tem uma coisa"},
       ])
     )
 
     novaLista.push(new TaskList(
       "Mais uma lista",
       [
-        {concluida: false, nomeTask: "Essa aqui tem duas"},
-        {concluida: false, nomeTask: "belas pendências"},
+        {status: 1, concluida: false, nomeTask: "Essa aqui tem duas"},
+        {status: 1, concluida: false, nomeTask: "belas pendências"},
       ])
     )
 

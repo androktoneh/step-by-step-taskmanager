@@ -1,0 +1,24 @@
+
+.task-item {
+  padding: 8px 0;
+  align-items: center;
+}
+
+.task-item>div {
+  padding-left: 8px;
+  padding-top: 2px;
+  vertical-align: bottom;
+}
+
+.adicionar-tarefa-container {
+  display: flex;
+  align-items: center;
+}
+
+.adicionar-tarefa-input {
+  flex-grow: 1;
+}
+
+.adicionar-tarefa-input>input {
+  width: 100%;
+}

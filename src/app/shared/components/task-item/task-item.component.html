@@ -1,0 +1,11 @@
+<div class="form-group task-item-container">
+  <mat-checkbox class="checkbox pe-2" [(ngModel)]="taskItem.concluida"></mat-checkbox>
+  <input
+    #nomeTaskInput
+    class="form-control form-control-sm nome-task-input"
+    type="text"
+    [value]="taskItem.nomeTask"
+    (change)="edicaoNomeTask($event)"
+  >
+</div>
+

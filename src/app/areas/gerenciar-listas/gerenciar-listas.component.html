@@ -9,12 +9,18 @@
         <div class="container-areas-listas me-2">
           <h5>Suas listas</h5>
           <div>
-            <mat-selection-list #taskList [multiple]="false"
+            <mat-selection-list
+              #taskList [multiple]="false"
               (selectionChange)="listaSelecionada(taskList)"
-              class="ph-container-da-lista" >
-              <mat-list-option class="card-lista-titulo" *ngFor="let item of listasDeTarefas" [value]="item">
+              class="ph-container-da-lista"
+            >
+              <mat-list-option
+                *ngFor="let item of listasDeTarefas" [value]="item"
+                class="card-lista-titulo"
+              >
                 <div class="d-flex">
-                  <mat-icon fontIcon="forest"></mat-icon> <span class="ps-4">{{item.nomeLista}}</span>
+                  <mat-icon fontIcon="forest"></mat-icon>
+                  <span class="ps-4">{{item.nomeLista}}</span>
                 </div>
               </mat-list-option>
             </mat-selection-list>
