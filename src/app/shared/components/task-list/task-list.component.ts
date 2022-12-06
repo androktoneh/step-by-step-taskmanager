@@ -23,10 +23,10 @@ export class TaskListComponent implements OnInit {
   }
 
   adicionarNovaTarefa() {
-    if(this.novaTarefaNome) {
-      var novaTarefa = new TaskItem(this.novaTarefaNome);
+    if(this.novaTarefaNome && this.novaTarefaNome.trim()) {
+      var novaTarefa = new TaskItem(this.novaTarefaNome.trim());
       this.listaDeTarefas?.tarefas.push(novaTarefa);
-      this.novaTarefaNome = '';
     }
+    this.novaTarefaNome = '';
   }
 }

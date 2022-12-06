@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { AreasModule } from './areas/areas.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AreasModule } from './areas/areas.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AreasModule
+    AreasModule,
+    FontAwesomeModule
   ],
   bootstrap: [AppComponent]
 })

@@ -9,6 +9,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
     MatExpansionModule,
     MatCheckboxModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   exports: [
     TaskListComponent,
