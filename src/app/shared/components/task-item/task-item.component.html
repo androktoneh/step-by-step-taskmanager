@@ -7,8 +7,12 @@
     [value]="taskItem.nomeTask"
     (change)="edicaoNomeTask($event)"
   >
-  <div>
-
+  <div class="ps-2" >
+    <i
+      class="fa-regular fa-trash-can clickable-icon-trash"
+      (click)="removerTask()"
+    >
+    </i>
   </div>
 </div>
 

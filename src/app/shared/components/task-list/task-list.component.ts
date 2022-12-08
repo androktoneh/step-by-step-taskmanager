@@ -13,7 +13,7 @@ export class TaskListComponent implements OnInit {
 
   constructor() { }
 
-  @Input() listaDeTarefas: TaskList | undefined;
+  @Input() listaDeTarefas!: TaskList | undefined;
   novaTarefaNome: string = '';
 
   @ViewChildren(TaskItemComponent)
@@ -28,5 +28,12 @@ export class TaskListComponent implements OnInit {
       this.listaDeTarefas?.tarefas.push(novaTarefa);
     }
     this.novaTarefaNome = '';
+  }
+
+  removerTaskDaLista(taskItem: any) {
+    var indexTask = this.listaDeTarefas!.tarefas.findIndex(x => x === taskItem);
+    if(indexTask < 0) return;
+
+    this.listaDeTarefas!.tarefas.splice(indexTask, 1);
   }
 }

@@ -11,7 +11,8 @@ import { EnumStatusTask } from 'src/app/models/enumerables/enum-status-task';
 export class TaskItemComponent implements OnInit, AfterViewInit {
 
   @Input() taskItem: TaskItem = new TaskItem();
-  @Output() removerListaOutput = new EventEmitter<TaskItem>();
+  @Output() removerTaskOutput = new EventEmitter<TaskItem>();
+
   @ViewChildren('nomeTaskInput') inputNomeTask!: QueryList<any>
 
   constructor() { }
@@ -33,5 +34,9 @@ export class TaskItemComponent implements OnInit, AfterViewInit {
   //   var testando = this.inputNomeTask.get(0);
   //   testando?.nativeElement.focus();
   // }
+
+  removerTask() {
+    this.removerTaskOutput.emit(this.taskItem);
+  }
 
 }
