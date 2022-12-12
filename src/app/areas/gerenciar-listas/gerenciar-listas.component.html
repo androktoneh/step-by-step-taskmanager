@@ -1,37 +1,35 @@
-<div class="container-main">
-  <div class="container-title">
+<div class="component-container-main">
+  <div class="component-container-title">
     <h2>Gerenciar Listas</h2>
     <hr>
   </div>
-  <div class="container-body">
-    <div class="d-flex">
-      <div class="col-6">
-        <div class="container-areas-listas me-2">
-          <h5>Suas listas</h5>
-          <div>
-            <mat-selection-list
-              #taskList [multiple]="false"
-              (selectionChange)="listaSelecionada(taskList)"
-              class="ph-container-da-lista"
+  <div class="component-container-body">
+    <div class="col-6">
+      <div class="container-areas-listas me-2">
+        <h5>Suas listas</h5>
+        <div>
+          <mat-selection-list
+            #taskList [multiple]="false"
+            (selectionChange)="listaSelecionada(taskList)"
+            class="ph-container-da-lista"
+          >
+            <mat-list-option
+              *ngFor="let item of listasDeTarefas" [value]="item"
+              class="card-lista-titulo"
             >
-              <mat-list-option
-                *ngFor="let item of listasDeTarefas" [value]="item"
-                class="card-lista-titulo"
-              >
-                <div class="d-flex">
-                  <mat-icon fontIcon="forest"></mat-icon>
-                  <span class="ps-4">{{item.nomeLista}}</span>
-                </div>
-              </mat-list-option>
-            </mat-selection-list>
-          </div>
+              <div class="d-flex">
+                <mat-icon fontIcon="forest"></mat-icon>
+                <span class="ps-4">{{item.nomeLista}}</span>
+              </div>
+            </mat-list-option>
+          </mat-selection-list>
         </div>
       </div>
-      <div class="col-6 pe-2">
-        <h5>Modificar Lista</h5>
-        <div class="ph-container-da-visualizacao">
-          <app-task-list [listaDeTarefas]="listaEmVisualizacao"></app-task-list>
-        </div>
+    </div>
+    <div class="col-6 pe-3">
+      <h5>Modificar Lista</h5>
+      <div class="ph-container-da-visualizacao">
+        <app-task-list [listaDeTarefas]="listaEmVisualizacao"></app-task-list>
       </div>
     </div>
   </div>

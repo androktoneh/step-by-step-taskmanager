@@ -1,14 +1,14 @@
 <div class="card-task-list">
-  <mat-expansion-panel [expanded]="true">
-    <mat-expansion-panel-header>
-      {{listaDeTarefas?.nomeLista}}
-    </mat-expansion-panel-header>
-    <div class="task-item" *ngFor="let tarefa of listaDeTarefas?.tarefas">
-        <app-task-item #taskList
-          [taskItem]="tarefa"
-          (removerTaskOutput)="removerTaskDaLista($event)"
-        >
-        </app-task-item>
+  <div class="task-list-container">
+    <h3>{{listaDeTarefas?.nomeLista}}</h3>
+    <div class="task-list-scroller-container">
+      <div class="task-item" *ngFor="let tarefa of listaDeTarefas?.tarefas">
+          <app-task-item #taskList
+            [taskItem]="tarefa"
+            (removerTaskOutput)="removerTaskDaLista($event)"
+          >
+          </app-task-item>
+      </div>
     </div>
     <div class="adicionar-tarefa-container">
       <button class="btn btn-success" (click)="adicionarNovaTarefa()">+</button>
@@ -16,5 +16,22 @@
         <input type="text" class="ms-1 form-control" placeholder="Aqui vai uma nova tarefa..." [(ngModel)]="novaTarefaNome">
       </div>
     </div>
-  </mat-expansion-panel>
+  </div>
 </div>
+
+
+<!--
+<div class="container-areas-listas me-2">
+  <h5>Suas listas</h5>
+  <div>
+    <mat-selection-list>
+      <mat-list-option>
+        <div class="d-flex">
+          <mat-icon></mat-icon>
+          <span></span>
+        </div>
+      </mat-list-option>
+    </mat-selection-list>
+  </div>
+</div>
+-->

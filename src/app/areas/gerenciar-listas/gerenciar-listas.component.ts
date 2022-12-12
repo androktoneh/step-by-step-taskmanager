@@ -17,7 +17,7 @@ export class GerenciarListasComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataSeedingDebug();
-    this.listaEmVisualizacao = this.listasDeTarefas[0];
+    this.listaEmVisualizacao = this.listasDeTarefas[1];
   }
 
   listaSelecionada(listaSelecionada: MatSelectionList) {
@@ -48,6 +48,10 @@ export class GerenciarListasComponent implements OnInit {
         {status: 1, concluida: false, nomeTask: "quanto trabalho ainda tem pela frente"},
         {status: 1, concluida: false, nomeTask: "e caramba"},
         {status: 1, concluida: false, nomeTask: "haja trabalho!"},
+        {status: 1, concluida: false, nomeTask: "tarefas!"},
+        {status: 1, concluida: false, nomeTask: "tarefas tarefas!"},
+        {status: 1, concluida: false, nomeTask: "trabalho!"},
+        {status: 1, concluida: false, nomeTask: "trabalho tarefas!"},
       ])
     )
 
