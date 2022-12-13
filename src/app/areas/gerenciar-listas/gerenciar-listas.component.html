@@ -1,12 +1,12 @@
-<div class="component-container-main">
-  <div class="component-container-title">
+<div class="page-main-container">
+  <div class="page-title-container">
     <h2>Gerenciar Listas</h2>
     <hr>
   </div>
-  <div class="component-container-body">
-    <div class="col-6">
-      <div class="container-areas-listas me-2">
-        <h5>Suas listas</h5>
+  <div class="page-body-container">
+    <div class="col-6 page-section-container">
+      <h5>Suas listas</h5>
+      <div class="container-areas-listas pe-3">
         <div>
           <mat-selection-list
             #taskList [multiple]="false"
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div class="col-6 pe-3">
+    <div class="col-6 page-section-container pe-3">
       <h5>Modificar Lista</h5>
       <div class="ph-container-da-visualizacao">
         <app-task-list [listaDeTarefas]="listaEmVisualizacao"></app-task-list>

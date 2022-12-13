@@ -1,30 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
-
 body {
   background-color: #181818 !important;
 }
 
-.component-container-main {
-  padding-top: 16px;
+.page-main-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
 }
 
-.component-container-title {
+.page-title-container {
+  height: 10vh;
+  padding-top: 16px;
+  padding-left: 1rem;
   font-weight: bold;
-  padding-left: 1rem;
-  width: 100%;
 }
 
-.component-container-body {
-  width: 100%;
-  padding-left: 1rem;
-  flex-grow: 1;
+.page-body-container {
+  height: 90vh;
   display: flex;
+  flex-grow: 1;
+  padding-left: 1rem;
+}
+
+.page-section-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.form-control-sm {
+  padding: .375rem .75rem;
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { height: 100vh; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
