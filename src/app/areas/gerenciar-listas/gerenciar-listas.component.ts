@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSelectionList } from '@angular/material/list';
-import { TaskItem } from 'src/app/models/classes/task-item';
 import { TaskList } from 'src/app/models/classes/task-list';
+import { EditorTaskListComponent } from 'src/app/shared/components/editor-task-list/editor-task-list.component';
 
 @Component({
   selector: 'app-gerenciar-listas',
@@ -10,7 +11,9 @@ import { TaskList } from 'src/app/models/classes/task-list';
 })
 export class GerenciarListasComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private matDialog: MatDialog
+  ) { }
 
   listasDeTarefas: TaskList[] = [];
   listaEmVisualizacao: TaskList | undefined;
@@ -22,6 +25,13 @@ export class GerenciarListasComponent implements OnInit {
 
   listaSelecionada(listaSelecionada: MatSelectionList) {
     this.listaEmVisualizacao = listaSelecionada.selectedOptions.selected[0]?.value;
+  }
+
+  adicionarNovaLista(){
+    this.matDialog.open(EditorTaskListComponent, {
+      width: '60%',
+      height: 'auto'
+    });
   }
 
 
