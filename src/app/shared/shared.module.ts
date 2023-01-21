@@ -32,7 +32,8 @@ import { EditorTaskListComponent } from './components/editor-task-list/editor-ta
     EditorTaskListComponent,
     MatExpansionModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
 })
 export class SharedModule { }

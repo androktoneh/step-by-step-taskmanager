@@ -6,8 +6,8 @@
   <div class="page-body-container">
     <div class="col-6 page-section-container">
       <h5>Suas listas</h5>
-      <div class="container-areas-listas pe-3">
-        <div>
+      <div class="container-areas-listas pe-3 pb-2">
+        <div class="areas-listas-scroller-container">
           <mat-selection-list
             #taskList [multiple]="false"
             (selectionChange)="listaSelecionada(taskList)"
@@ -24,10 +24,10 @@
             </mat-list-option>
           </mat-selection-list>
         </div>
-      </div>
-      <div class="adicionar-lista-container pe-3 mt-3">
-        <div class="d-grid">
-          <button type="button" class="btn btn-success" (click)="adicionarNovaLista()">Adicione uma nova lista</button>
+        <div class="adicionar-lista-container mt-2">
+          <div class="d-grid">
+            <button type="button" class="btn btn-success" (click)="adicionarNovaLista()">Adicione uma nova lista</button>
+          </div>
         </div>
       </div>
     </div>

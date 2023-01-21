@@ -28,10 +28,16 @@ export class GerenciarListasComponent implements OnInit {
   }
 
   adicionarNovaLista(){
-    this.matDialog.open(EditorTaskListComponent, {
+    var modalEditorTaskListRef = this.matDialog.open(EditorTaskListComponent, {
       width: '60%',
       height: 'auto'
     });
+
+    modalEditorTaskListRef.afterClosed().subscribe((retorno: TaskList) => {
+      if(retorno) {
+        this.listasDeTarefas.push(retorno);
+      }
+    })
   }
 
 
@@ -81,6 +87,13 @@ export class GerenciarListasComponent implements OnInit {
     )
 
     novaLista.push(new TaskList("Lista interminada que aind",[ ]))
+
+    novaLista.push(new TaskList("Lista interminada que aind",[ ]))
+
+    novaLista.push(new TaskList("Lista interminada que aind",[ ]))
+
+    novaLista.push(new TaskList("Lista interminada que aind",[ ]))
+
 
     this.listasDeTarefas = novaLista;
   }

@@ -1,20 +1,27 @@
 <div>
     <div>
-        Adicionar nova lista (titulo)
+        <h3>Adicionar nova lista</h3>
     </div>
-    <div class="row">
+    <div [formGroup]="formEditorTaskList!" class="form-group">
         <div>
-            //Necessário:
             <div>
-                //Input para o nome da lista;
+              <label for="inputNomeLista">Nome da Lista</label>
+                <input
+                  id="inputNomeLista"
+                  type="text"
+                  formControlName="nomeLista"
+                  placeholder="Insira o nome da lista"
+                  class="form-control form-control-sm"
+                >
             </div>
-            <div>
+            <!-- <div>
                 //Seletor de ícone para a lista;
-            </div>
+            </div> -->
         </div>
     </div>
-    <div>
-        Botões de confirmação/fechar
+    <div class="button-container-center">
+        <button type="button" class="btn btn-sm btn-success me-1" (click)="salvar()">Confirmar</button>
+        <button type="button" class="btn btn-sm btn-danger ms-1" (click)="fecharModal()">Cancelar</button>
     </div>
 
 </div>
